@@ -81,8 +81,8 @@ static ssize_t raw_xlat(void *instance, REQUEST *request, char const *attr,
   if (decode_result == 0 && dup_packet->vps) {
     vp = fr_pair_find_by_da(dup_packet->vps, da, TAG_ANY);
     if (vp) {
-      strncpy(out, vp->vp_strvalue, freespace);
-      RDEBUG2("rlm_raw: Found, %s = %s", attr, vp->vp_strvalue);
+      vp_prints_value(out, freespace, vp, '"');
+      RDEBUG2("rlm_raw: Found, %s = %s", attr, out);
     } else {
       RDEBUG2("rlm_raw: Not found, %s", attr);
     }
