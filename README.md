@@ -1,3 +1,8 @@
+*** This module will not be necessary in version 4. The v4.0.x branch today supports dynamic clients, with all attributes decoded, and available to the unlang policies. ***
+
+https://github.com/FreeRADIUS/freeradius-server/blob/v4.0.x/raddb/sites-available/dynamic-clients
+---
+
 # rlm_raw - FreeRADIUS module
 The module provides the xlat expansion functionality %{raw: ... } to get the value of attribute from requesting packet.
 
